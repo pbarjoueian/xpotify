@@ -1,0 +1,6 @@
+from ..env import env
+
+CORS_ORIGIN_ALLOW_ALL = bool(int(env("CORS_ORIGIN_ALLOW_ALL")))
+CORS_ALLOW_METHODS = env("CORS_ALLOW_METHODS").split(",")
+CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS").split(",")
+CORS_ORIGIN_WHITELIST = env("CORS_ORIGIN_WHITELIST").split(",")
