@@ -27,4 +27,5 @@
   * [x] Add separated Docker files for production and development environments
   * [x] Make Docker images smaller
   * [x] Change login to jwt
-  * [x] Add production documentation
+  * [x] Add production
+  * [x] Disable rest_registration login API
