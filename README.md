@@ -15,7 +15,8 @@
     7. run `python manage.py migrate`
     8. run `python manage.py fake_admin` _will create_ (email=<admin@test.com>, password=123456789)
     9. run `python manage.py fake_user` _will create_ (email=<user@test.com>, password=123456789)
-    10. run `python manage.py runserver
+    10. run `python manage.py import_initial_data --path tracks/management/commands/sample_tracks.csv`
+    11. run `python manage.py runserver
 
 * ## Note
 

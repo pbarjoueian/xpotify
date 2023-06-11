@@ -3,7 +3,7 @@ from django.db import models
 
 class Track(models.Model):
     acousticness = models.FloatField(null=True, blank=True)
-    album_id = models.UUIDField(null=True, blank=True)
+    album_id = models.CharField(null=True, blank=True, max_length=128)
     analysis_url = models.URLField(null=True, blank=True)
     artists_id = models.CharField(null=True, blank=True, max_length=500)
     available_markets = models.CharField(null=True, blank=True, max_length=512)
@@ -11,9 +11,9 @@ class Track(models.Model):
     danceability = models.FloatField(null=True, blank=True)
     disc_number = models.IntegerField(null=True, blank=True)
     duration_ms = models.IntegerField(null=True, blank=True)
-    enerfy = models.FloatField(null=True, blank=True)
+    energy = models.FloatField(null=True, blank=True)
     href = models.URLField(null=True, blank=True)
-    uuid = models.UUIDField(null=True, blank=True)
+    uuid = models.CharField(null=True, blank=True, max_length=128)
     instrumentalness = models.FloatField(null=True, blank=True)
     key = models.FloatField(null=True, blank=True)
     liveness = models.FloatField(null=True, blank=True)
@@ -32,7 +32,7 @@ class Track(models.Model):
     track_number = models.IntegerField(null=True, blank=True)
     uri = models.CharField(null=True, blank=True, max_length=256)
     valence = models.FloatField(null=True, blank=True)
-    cluster = models.IntegerField(null=True, blank=True)
+    cluster_number = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return "%s: %s: %s: %s" % (self.id, self.uuid, self.name, self.cluster)
+        return "%s: %s: %s: %s" % (self.id, self.uuid, self.name, self.cluster_number)

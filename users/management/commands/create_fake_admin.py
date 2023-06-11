@@ -6,7 +6,7 @@ from users.models import User
 class Command(BaseCommand):
     help = "create fake admin with company"
 
-    def handle(self, *args, **options):
+    def handle(self, *args, **kwargs):
         user = User.objects.create_superuser(
             email="admin@test.com",
             password="123456789",
