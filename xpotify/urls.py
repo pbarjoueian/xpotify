@@ -25,6 +25,8 @@ from drf_spectacular.views import (
 )
 from rest_framework_simplejwt import views as jwt_views
 
+from users.views import UserHistoryView
+
 api_urlpatterns = [
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
@@ -47,6 +49,11 @@ api_urlpatterns = [
         "account/token/refresh/",
         jwt_views.TokenRefreshView.as_view(),
         name="token_refresh",
+    ),
+    path(
+        "track/",
+        include("users.urls"),
+        name="user",
     ),
     path("track/", include("tracks.urls"), name="track"),
 ]

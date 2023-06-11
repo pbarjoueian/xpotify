@@ -8,7 +8,7 @@ from tracks.serializers import TrackSerializer
 from tracks.utils import delete_cache
 
 
-class TrackView(ModelViewSet):
+class TrackViewSet(ModelViewSet):
     serializer_class = TrackSerializer
     queryset = Track.objects.all()
     http_method_names = ["get", "post", "patch", "delete"]

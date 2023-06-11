@@ -34,3 +34,5 @@
   * [x] Use a more efficient and distributed approach for training
   * [x] Select rows in chunks
   * [x] Add logging and APM
+  * [x] Add throttling configurations
+  * [x] Improve Redis usage

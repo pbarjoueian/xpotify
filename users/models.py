@@ -14,6 +14,7 @@ class User(AbstractUser):
             "unique": _("A user with this email already exists."),
         },
     )
+    history = models.JSONField(null=True, blank=True, default=list)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
