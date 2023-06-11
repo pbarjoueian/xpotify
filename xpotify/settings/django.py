@@ -36,7 +36,7 @@ THIRD_PARTY_APPS = [
     # "django_celery_beat",
 ]
 
-PROJECT_APPS = ["users"]
+PROJECT_APPS = ["users", "tracks"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -94,6 +94,15 @@ DATABASES = {
         "PASSWORD": env("DATABASE_PASSWORD"),
         "HOST": env("DATABASE_HOST"),
         "PORT": env("DATABASE_PORT"),
+    }
+}
+
+# Connect to Redis server for cache backend
+# LINK - https://github.com/jazzband/django-redis#configure-as-cache-backend
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": env("REDIS_URL"),
     }
 }
 

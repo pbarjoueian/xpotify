@@ -13,8 +13,8 @@
     5. run `pip install pipenv` inside your virtualenv
     6. run `pipenv install -d` inside your virtualenv
     7. run `python manage.py migrate`
-    8. run `python manage.py fake_admin` _will create_ (email=<admin@xpotify.com>, password=123456789)
-    9. run `python manage.py fake_user` _will create_ (email=<user@xpotify.com>, password=123456789)
+    8. run `python manage.py fake_admin` _will create_ (email=<admin@test.com>, password=123456789)
+    9. run `python manage.py fake_user` _will create_ (email=<user@test.com>, password=123456789)
     10. run `python manage.py runserver
 
 * ## Note
@@ -27,5 +27,6 @@
   * [x] Add separated Docker files for production and development environments
   * [x] Make Docker images smaller
   * [x] Change login to jwt
-  * [x] Add production
+  * [x] Add production configurations
   * [x] Disable rest_registration login API
+  * [x] Use separated models and relations for Model objects

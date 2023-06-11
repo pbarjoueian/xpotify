@@ -37,17 +37,18 @@ api_urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-    path("accounts/", include("rest_registration.api.urls")),
+    path("account/", include("rest_registration.api.urls")),
     path(
-        "accounts/token/",
+        "account/token/",
         jwt_views.TokenObtainPairView.as_view(),
         name="token_obtain_pair",
     ),
     path(
-        "accounts/token/refresh/",
+        "account/token/refresh/",
         jwt_views.TokenRefreshView.as_view(),
         name="token_refresh",
     ),
+    path("track/", include("tracks.urls"), name="track"),
 ]
 
 urlpatterns = [

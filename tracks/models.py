@@ -1,0 +1,38 @@
+from django.db import models
+
+
+class Track(models.Model):
+    acousticness = models.FloatField(null=True, blank=True)
+    album_id = models.UUIDField(null=True, blank=True)
+    analysis_url = models.URLField(null=True, blank=True)
+    artists_id = models.CharField(null=True, blank=True, max_length=500)
+    available_markets = models.CharField(null=True, blank=True, max_length=512)
+    country = models.CharField(null=True, blank=True, max_length=5)
+    danceability = models.FloatField(null=True, blank=True)
+    disc_number = models.IntegerField(null=True, blank=True)
+    duration_ms = models.IntegerField(null=True, blank=True)
+    enerfy = models.FloatField(null=True, blank=True)
+    href = models.URLField(null=True, blank=True)
+    uuid = models.UUIDField(null=True, blank=True)
+    instrumentalness = models.FloatField(null=True, blank=True)
+    key = models.FloatField(null=True, blank=True)
+    liveness = models.FloatField(null=True, blank=True)
+    loudness = models.FloatField(null=True, blank=True)
+    lyrics = models.TextField(null=True, blank=True)
+    mode = models.FloatField(null=True, blank=True)
+    name = models.CharField(null=True, blank=True, max_length=256)
+    playlist = models.CharField(null=True, blank=True, max_length=256)
+    popularity = models.FloatField(null=True, blank=True)
+    preview_url = models.URLField(null=True, blank=True)
+    speechiness = models.FloatField(null=True, blank=True)
+    tempo = models.FloatField(null=True, blank=True)
+    time_signature = models.FloatField(null=True, blank=True)
+    track_href = models.URLField(null=True, blank=True)
+    track_name_prev = models.CharField(null=True, blank=True, max_length=128)
+    track_number = models.IntegerField(null=True, blank=True)
+    uri = models.CharField(null=True, blank=True, max_length=256)
+    valence = models.FloatField(null=True, blank=True)
+    cluster = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return "%s: %s: %s: %s" % (self.id, self.uuid, self.name, self.cluster)
