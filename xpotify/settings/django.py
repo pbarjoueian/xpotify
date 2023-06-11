@@ -36,7 +36,7 @@ THIRD_PARTY_APPS = [
     # "django_celery_beat",
 ]
 
-PROJECT_APPS = ["users", "tracks"]
+PROJECT_APPS = ["users", "tracks", "ml"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",

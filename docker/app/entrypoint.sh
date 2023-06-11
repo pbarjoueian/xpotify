@@ -12,7 +12,7 @@ if [ "$DATABASE" = "postgres" ]; then
 fi
 
 # Run migrate and collectstatic files
-python manage.py makemigrations users
+python manage.py makemigrations users tracks ml
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
 

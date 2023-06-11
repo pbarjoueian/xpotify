@@ -31,3 +31,6 @@
   * [x] Add production configurations
   * [x] Disable rest_registration login API
   * [x] Use separated models and relations for Model objects
+  * [x] Use a more efficient and distributed approach for training
+  * [x] Select rows in chunks
+  * [x] Add logging and APM

@@ -458,3 +458,5 @@ media
 
 # statics
 /files
+
+/ml/trained_models/

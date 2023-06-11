@@ -46,6 +46,33 @@ services:
     command: redis-server --include /usr/local/etc/redis/redis.conf
     ports:
       - "6379:6379"
+  celery:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    container_name: django-docker-celery
+    command: celery -A xpotify worker -l info
+    volumes:
+      - ./:/webapp/
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
+
+  celery-beat:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    container_name: django-docker-celery-beat
+    command: celery -A xpotify beat -l info
+    volumes:
+      - ./:/webapp/
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
 
 volumes:
   pgdata:
